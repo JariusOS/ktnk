@@ -13,6 +13,7 @@ export function Cover({ onNext }: { onNext: () => void }) {
         transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0 h-full w-full object-cover object-[60%_30%]"
       />
+      <div className="absolute inset-0 bg-ink/25" />
       <div className="absolute inset-0 frame-scrim" />
       <div className="pointer-events-none absolute inset-0 opacity-70 glow-edge mix-blend-screen" />
 
