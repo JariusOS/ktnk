@@ -152,3 +152,49 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+@utility frame-scrim {
+  background: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--ink) 92%, transparent) 0%,
+    color-mix(in oklab, var(--ink) 45%, transparent) 45%,
+    transparent 100%
+  );
+}
+
+@utility glow-edge {
+  background:
+    radial-gradient(60% 40% at 10% 0%, color-mix(in oklab, var(--electric) 28%, transparent), transparent 70%),
+    radial-gradient(55% 45% at 95% 100%, color-mix(in oklab, var(--violet) 26%, transparent), transparent 70%);
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.snap-story {
+  scroll-snap-type: y mandatory;
+}
+.snap-story > section {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
