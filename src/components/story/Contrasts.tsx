@@ -67,7 +67,7 @@ export function Contrasts() {
         </div>
       </div>
 
-      <div className="pointer-events-none relative z-10 flex h-full flex-col justify-between p-7 pb-16">
+      <div className="pointer-events-none relative z-10 flex h-full flex-col justify-between p-7 pb-24">
         <div className="flex justify-between pt-14">
           <div style={{ opacity: split / 100 }} className="transition-opacity">
             <p className="eyebrow">{contrasts.a.label}</p>

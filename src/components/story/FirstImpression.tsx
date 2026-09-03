@@ -37,7 +37,7 @@ export function FirstImpression({ onNext }: { onNext: () => void }) {
           </motion.p>
         ))}
 
-        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-6 p-7 pb-16">
+        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-5 p-7 pb-24">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

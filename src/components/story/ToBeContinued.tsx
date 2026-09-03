@@ -18,7 +18,7 @@ export function ToBeContinued() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.4 }}
         transition={{ duration: 0.9 }}
-        className="relative z-10 flex h-full flex-col justify-end gap-7 p-7 pb-16"
+        className="relative z-10 flex h-full flex-col justify-end gap-5 p-7 pb-24"
       >
         <h2 className="display text-[clamp(2.25rem,12vw,4.5rem)]">
           Karen, in a few frames

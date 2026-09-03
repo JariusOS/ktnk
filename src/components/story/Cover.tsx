@@ -16,7 +16,7 @@ export function Cover({ onNext }: { onNext: () => void }) {
       <div className="absolute inset-0 frame-scrim" />
       <div className="pointer-events-none absolute inset-0 opacity-70 glow-edge mix-blend-screen" />
 
-      <div className="relative z-10 mt-auto flex flex-col gap-6 p-7 pb-16">
+      <div className="relative z-10 mt-auto flex flex-col gap-5 p-7 pb-24">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export function Cover({ onNext }: { onNext: () => void }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.65, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="display text-[clamp(3.75rem,22vw,9rem)]"
+          className="display text-[clamp(3.25rem,19vw,7.5rem)]"
         >
           Karen
           <span className="mt-3 block font-sans text-[clamp(1rem,4.5vw,1.5rem)] font-light normal-case tracking-tight text-foreground/75">
