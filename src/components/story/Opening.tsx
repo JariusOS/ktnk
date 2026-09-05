@@ -8,8 +8,10 @@ export function Opening({ onNext }: { onNext: () => void }) {
   return (
     <Screen id="open">
       <div className="pointer-events-none absolute inset-0 opacity-70 glow-edge" />
-      <button
-        type="button"
+      <div
+        role={stage === 0 ? "button" : undefined}
+        tabIndex={stage === 0 ? 0 : undefined}
+        aria-label={stage === 0 ? "Begin" : undefined}
         onClick={() => stage === 0 && setStage(1)}
         className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-8 px-8 text-center"
       >
@@ -76,7 +78,7 @@ export function Opening({ onNext }: { onNext: () => void }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </button>
+      </div>
     </Screen>
   );
 }

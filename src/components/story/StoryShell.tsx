@@ -1,22 +1,30 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { sections } from "@/content/karen";
-import { Cover } from "./Cover";
-import { FirstImpression } from "./FirstImpression";
-import { Contrasts } from "./Contrasts";
-import { Questions } from "./Questions";
-import { Unpredictable } from "./Unpredictable";
-import { ToBeContinued } from "./ToBeContinued";
+import { AnimatePresence } from "motion/react";
+import { chapters, observations } from "@/content/karen";
+import { Opening } from "./Opening";
+import { ObservationScreen } from "./ObservationScreen";
+import { KarenIndex } from "./KarenIndex";
+import { TwoSides } from "./TwoSides";
+import { YourTurn } from "./YourTurn";
+import { Imagine } from "./Imagine";
+import { OneThing } from "./OneThing";
+import { VolTwo } from "./VolTwo";
+import { Closing } from "./Closing";
+import { Secret } from "./Secret";
 
 export function StoryShell() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
+  const [secret, setSecret] = useState(false);
 
   const goTo = useCallback((index: number) => {
     const scroller = scrollerRef.current;
-    const section = sections[index];
-    if (!scroller || !section) return;
-    const el = scroller.querySelector(`#${section.id}`);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const chapter = chapters[Math.min(Math.max(index, 0), chapters.length - 1)];
+    if (!scroller || !chapter) return;
+    scroller.querySelector(`#${chapter.id}`)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }, []);
 
   useEffect(() => {
@@ -27,10 +35,10 @@ export function StoryShell() {
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          const index = sections.findIndex((s) => s.id === entry.target.id);
+          const index = chapters.findIndex((c) => c.id === entry.target.id);
           if (index >= 0) {
             setActive(index);
-            window.history.replaceState(null, "", `#${sections[index]!.id}`);
+            window.history.replaceState(null, "", `#${chapters[index]!.id}`);
           }
         }
       },
@@ -43,59 +51,63 @@ export function StoryShell() {
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
-    const index = sections.findIndex((s) => s.id === hash);
+    const index = chapters.findIndex((c) => c.id === hash);
     if (index > 0) {
-      const el = scrollerRef.current?.querySelector(`#${hash}`);
-      el?.scrollIntoView({ block: "start" });
+      scrollerRef.current
+        ?.querySelector(`#${hash}`)
+        ?.scrollIntoView({ block: "start" });
     }
   }, []);
 
-  return (
-    <main
-      ref={scrollerRef}
-      className="snap-story h-dvh overflow-y-scroll bg-ink"
-    >
-      <Cover onNext={() => goTo(1)} />
-      <FirstImpression onNext={() => goTo(2)} />
-      <Contrasts />
-      <Questions />
-      <Unpredictable />
-      <ToBeContinued />
+  const progress = ((active + 1) / chapters.length) * 100;
 
-      <nav className="fixed top-1/2 right-3 z-30 flex -translate-y-1/2 flex-col gap-2.5">
-        {sections.map((s, i) => (
-          <button
-            key={s.id}
-            type="button"
-            aria-label={s.label}
-            aria-current={i === active}
-            onClick={() => goTo(i)}
-            className={`h-1.5 rounded-full transition-all ${
-              i === active ? "h-5 w-1.5 bg-primary" : "w-1.5 bg-foreground/30"
-            }`}
+  return (
+    <>
+      <main ref={scrollerRef} className="snap-story h-dvh overflow-y-scroll bg-ink">
+        <Opening onNext={() => goTo(1)} />
+        {observations.map((o, i) => (
+          <ObservationScreen
+            key={o.id}
+            observation={o}
+            index={i}
+            onNext={() => goTo(2 + i)}
           />
         ))}
-      </nav>
+        <KarenIndex onNext={() => goTo(5)} />
+        <TwoSides onNext={() => goTo(6)} />
+        <YourTurn onNext={() => goTo(7)} />
+        <Imagine onNext={() => goTo(8)} />
+        <OneThing onNext={() => goTo(9)} />
+        <VolTwo onNext={() => goTo(10)} />
+        <Closing onSecret={() => setSecret(true)} />
+      </main>
 
-      <div className="fixed inset-x-0 bottom-0 z-30 flex items-center justify-between px-6 py-4 text-[0.625rem] tracking-[0.3em] uppercase text-muted-foreground mix-blend-difference">
-        <button
-          type="button"
-          onClick={() => goTo(Math.max(0, active - 1))}
-          disabled={active === 0}
-          className="disabled:opacity-25"
-        >
-          ← Back
-        </button>
-        <span>{String(active + 1).padStart(2, "0")} / 06</span>
-        <button
-          type="button"
-          onClick={() => goTo(Math.min(sections.length - 1, active + 1))}
-          disabled={active === sections.length - 1}
-          className="disabled:opacity-25"
-        >
-          Next →
-        </button>
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 h-[2px] bg-foreground/10">
+        <div
+          className="h-full bg-gradient-to-r from-primary to-accent transition-[width] duration-700 ease-out"
+          style={{ width: `${progress}%` }}
+        />
       </div>
-    </main>
+
+      {active > 0 ? (
+        <button
+          type="button"
+          onClick={() => goTo(active - 1)}
+          aria-label="Go back"
+          className="fixed top-3 left-3 z-40 flex h-11 w-11 items-center justify-center rounded-full text-foreground/50 transition-colors hover:text-foreground"
+        >
+          ←
+        </button>
+      ) : null}
+
+      <span className="pointer-events-none fixed top-5 right-5 z-40 text-[0.5625rem] tracking-[0.3em] uppercase text-muted-foreground">
+        {String(active + 1).padStart(2, "0")} /{" "}
+        {String(chapters.length).padStart(2, "0")}
+      </span>
+
+      <AnimatePresence>
+        {secret ? <Secret onClose={() => setSecret(false)} /> : null}
+      </AnimatePresence>
+    </>
   );
 }

@@ -30,13 +30,13 @@ export function TwoSides({ onNext }: { onNext: () => void }) {
           src={photos[card.photo].src}
           alt={photos[card.photo].alt}
           initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 0.55, scale: 1 }}
+          animate={{ opacity: 0.8, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
           className="absolute inset-0 h-full w-full object-cover"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-ink/55" />
+      <div className="absolute inset-0 bg-ink/35" />
       <div className="pointer-events-none absolute inset-0 frame-scrim" />
 
       <motion.div
