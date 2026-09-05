@@ -20,10 +20,13 @@
 
 @theme inline {
   --font-display: "Anton", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Space Grotesk", system-ui, sans-serif;
   --color-ink: var(--ink);
   --color-electric: var(--electric);
   --color-violet: var(--violet);
+  --color-lavender: var(--lavender);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
