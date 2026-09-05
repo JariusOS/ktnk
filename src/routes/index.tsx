@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StoryShell } from "@/components/story/StoryShell";
 
-const title = "Karen, in a few frames — Vol. 01";
+const title = "Karen — Vol. 01: Things I've noticed";
 const description =
-  "A six-frame visual story made for Karen. Still figuring you out.";
+  "An interactive little world made for Karen. Things I've noticed, a few I haven't figured out, and one confession.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
