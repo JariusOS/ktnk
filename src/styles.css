@@ -166,6 +166,15 @@
   text-transform: uppercase;
 }
 
+@utility serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+
 @utility frame-scrim {
   background: linear-gradient(
     to top,
