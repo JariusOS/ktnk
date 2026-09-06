@@ -62,7 +62,7 @@ export function ChatArchive({ onNext }: { onNext: () => void }) {
           </h2>
         </div>
 
-        <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-3xl border border-border bg-deep/60 backdrop-blur-xl">
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-3xl border border-border bg-card/45 backdrop-blur-xl">
           <div className="flex items-center gap-3 border-b border-border/70 px-4 py-3">
             <img
               src={photos.bonnet.src}
