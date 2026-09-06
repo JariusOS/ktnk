@@ -16,7 +16,7 @@ Each is a full-bleed photo screen, tappable to reveal its evidence card.
 
 1. **LAID-BACK** — "You seem very comfortable just being yourself."
 2. **FAMILY IS A BIG DEAL** — quote: "I literally have 15 other siblings." / "That sentence required considerably more processing than you probably intended."
-3. **PLAYFULLY UNPREDICTABLE** — the transport saga / "I have learned that getting you from A to B may require its own logistics department."
+3. **PLAYFULLY UNPREDICTABLE** — the transport saga, her words ("Money is always a deal breaker") / "I have learned that getting you from A to B may require its own logistics department."
 4. **THERE'S MORE UNDERNEATH** — "You can make something serious sound casual. I don't think that means it isn't important to you."
 5. **STILL FIGURING YOU OUT** — "I have theories. I don't have conclusions." Ends with CONFIDENCE 63% / REMAINING UNKNOWN 37% and "Probably the interesting part." The existing Karen Index bars fold into this screen.
 
