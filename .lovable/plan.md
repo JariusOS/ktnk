@@ -28,11 +28,14 @@ Five moments, using only her real words:
 
 1. "You know what that means" → "This was approximately where I realised there was significantly more going on underneath the calm exterior."
 2. "I literally have 15 other siblings" → "I still don't know whether to laugh or ask for a family tree."
-3. Transport saga → "Operational complexity: unnecessarily high."
+3. Transport saga, her real words: "The park is really far from my house" / "Well I guess this is not happening" / "Money is always a deal breaker" → "Operational complexity: unnecessarily high."
 4. "Lol please say it" / "Don't tiptoe" → "Noted. Permanently."
-5. "There's nothing I can't talk about" → "You say the heavy things in the same tone as the light ones."
+5. "Being present" / "I like to talk about every little detail" / "And I think that's one way to build something" → "You said that lightly. I wrote it down."
 
-Nothing about the crying line or the details of the past relationship goes on screen — too private for an artifact she may show someone. Nothing invented; where I don't have her exact transport wording the screen refers to the saga without putting words in her mouth. Send me the real line and I'll drop it in.
+A sixth, quieter one: "And I didn't tell my dad before leaving o" / "Maybe my sisters will come up with something" → "Family logistics, handled with alarming confidence."
+
+Nothing about the crying line or the past relationship goes on screen — too private for an artifact she may show someone. Every quote is hers, verbatim.
+
 
 ## 3. I HAVE A THEORY
 
