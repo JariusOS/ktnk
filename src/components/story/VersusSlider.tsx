@@ -58,9 +58,9 @@ export function VersusSlider({ onNext }: { onNext: () => void }) {
             style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
           >
             <img
-              src={photos.pink.src}
-              alt={photos.pink.alt}
-              className="absolute inset-0 h-full w-full object-cover object-[45%_20%]"
+              src={photos.door.src}
+              alt={photos.door.alt}
+              className="absolute inset-0 h-full w-full object-cover object-[45%_25%]"
             />
             <div className="absolute inset-0 bg-ink/60" />
             <div className="absolute inset-0 flex flex-col justify-end gap-2 p-5">

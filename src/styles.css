@@ -197,11 +197,10 @@
   color: var(--muted-foreground);
 }
 
-.snap-story {
-  scroll-snap-type: y mandatory;
-}
-.snap-story > section {
-  scroll-snap-align: start;
+html,
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
