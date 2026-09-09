@@ -78,7 +78,7 @@ export function StoryShell() {
   return (
     <>
       <main className="relative h-dvh w-full overflow-hidden bg-ink">
-        <AnimatePresence initial={false} mode="popLayout" custom={dir}>
+        <AnimatePresence initial={false} mode="wait" custom={dir}>
           <motion.div
             key={chapters[index]!.id}
             custom={dir}
