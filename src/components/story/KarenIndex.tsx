@@ -8,12 +8,13 @@ export function KarenIndex({ onNext }: { onNext: () => void }) {
       <div className="pointer-events-none absolute inset-0 opacity-60 glow-edge" />
       <div className="relative z-10 flex h-full flex-col justify-center gap-8 p-7 pb-28">
         <div className="flex flex-col gap-2">
-          <h2 className="display text-[clamp(2rem,10vw,3.5rem)]">
-            The Karen Index
+          <div className="flex items-baseline gap-3">
+            <p className="eyebrow">05</p>
+            <p className="eyebrow text-primary">Still figuring you out</p>
+          </div>
+          <h2 className="serif text-[clamp(1.75rem,8vw,2.85rem)] leading-[1.08]">
+            I have theories. I don't have conclusions.
           </h2>
-          <p className="text-xs leading-relaxed text-muted-foreground">
-            Current readings based on highly questionable research.
-          </p>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -45,9 +46,9 @@ export function KarenIndex({ onNext }: { onNext: () => void }) {
         </div>
 
         <div className="flex flex-col gap-2">
-          <p className="serif text-2xl">System confidence: 63%</p>
-          <p className="text-xs text-muted-foreground">
-            The remaining 37% is probably the interesting part.
+          <p className="eyebrow">Confidence 63% · Remaining unknown 37%</p>
+          <p className="serif text-2xl text-primary">
+            Probably the interesting part.
           </p>
         </div>
 
