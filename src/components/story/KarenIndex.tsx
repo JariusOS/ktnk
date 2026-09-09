@@ -46,9 +46,9 @@ export function KarenIndex({ onNext }: { onNext: () => void }) {
         </div>
 
         <div className="flex flex-col gap-2">
-          <p className="serif text-2xl">System confidence: 63%</p>
-          <p className="text-xs text-muted-foreground">
-            The remaining 37% is probably the interesting part.
+          <p className="eyebrow">Confidence 63% · Remaining unknown 37%</p>
+          <p className="serif text-2xl text-primary">
+            Probably the interesting part.
           </p>
         </div>
 
