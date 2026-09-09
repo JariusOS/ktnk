@@ -73,12 +73,12 @@ export function StoryShell() {
             onNext={() => goTo(2 + i)}
           />
         ))}
-        <KarenIndex onNext={() => goTo(5)} />
-        <TwoSides onNext={() => goTo(6)} />
-        <YourTurn onNext={() => goTo(7)} />
-        <Imagine onNext={() => goTo(8)} />
-        <OneThing onNext={() => goTo(9)} />
-        <VolTwo onNext={() => goTo(10)} />
+        <KarenIndex onNext={() => goTo(6)} />
+        <ChatArchive onNext={() => goTo(7)} />
+        <Theories onNext={() => goTo(8)} />
+        <VersusSlider onNext={() => goTo(9)} />
+        <OneThing onNext={() => goTo(10)} />
+        <VolTwo onNext={() => goTo(11)} />
         <Closing onSecret={() => setSecret(true)} />
       </main>
 
