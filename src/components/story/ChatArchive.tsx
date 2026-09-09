@@ -65,9 +65,9 @@ export function ChatArchive({ onNext }: { onNext: () => void }) {
         <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-3xl border border-border bg-card/45 backdrop-blur-xl">
           <div className="flex items-center gap-3 border-b border-border/70 px-4 py-3">
             <img
-              src={photos.bonnet.src}
-              alt={photos.bonnet.alt}
-              className="h-9 w-9 rounded-full object-cover object-[55%_28%] ring-1 ring-primary/40"
+              src={photos.polo.src}
+              alt={photos.polo.alt}
+              className="h-9 w-9 rounded-full object-cover object-[50%_22%] ring-1 ring-primary/40"
             />
             <div className="flex flex-col">
               <span className="text-sm text-foreground/90">Karen</span>

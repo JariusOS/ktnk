@@ -24,7 +24,9 @@ export function ObservationScreen({
         whileInView={{ scale: 1 }}
         viewport={{ amount: 0.4 }}
         transition={{ duration: 2.4, ease: "easeOut" }}
-        className={`absolute inset-0 h-full w-full object-cover ${observation.focus}`}
+        className={`absolute inset-0 h-full w-full ${
+          observation.fit === "contain" ? "object-contain p-6" : "object-cover"
+        } ${observation.focus}`}
       />
       <div className="absolute inset-0 bg-ink/55" />
       <div className="pointer-events-none absolute inset-0 frame-scrim" />

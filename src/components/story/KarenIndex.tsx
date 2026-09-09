@@ -9,7 +9,7 @@ export function KarenIndex({ onNext }: { onNext: () => void }) {
       <div className="relative z-10 flex h-full flex-col justify-center gap-8 p-7 pb-28">
         <div className="flex flex-col gap-2">
           <div className="flex items-baseline gap-3">
-            <p className="eyebrow">05</p>
+            <p className="eyebrow">07</p>
             <p className="eyebrow text-primary">Still figuring you out</p>
           </div>
           <h2 className="serif text-[clamp(1.75rem,8vw,2.85rem)] leading-[1.08]">
